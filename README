@@ -1,8 +1,18 @@
-What I have so far
+What I have so far:
 It compiles if you have all the dependencies
 It doesn't display any type of graphics yet because the framework is still incomplete but its getting there
 
+what I'm currently working on:
+Finding or making a simple, human-readable filetype that can support multi-meshed objects and skeletal animation (if only obj did animation!)
+	possibly md5?
+
 Dependencies: glfw, freeimage, glm (GLMath), assimp (going to remove it)
+
+glfw: Like glut except better
+glm: Math library because opengl's internal math components are all deprecated
+freeimage: image loader that supports many many formats. Dumps raw image data into a consistent structure and then use opengl to make a texture out of it
+assimp: Claims to be a universal asset loader; ie can load obj, 3ds, dae, ... into a single consistent node hierarchy. It fails on its premise b/c its not consistent
+across different filetypes and the editors that exported them
 
 When it's time to significantly progress (sound, physics, skeletal animation, etc.) please BRANCH off the base because these changes will require SIGNIFICANT
 addition/modification to the base rendering framework (I know from experience)
