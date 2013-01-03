@@ -15,9 +15,9 @@
 
 struct Vertex_t
 {
-    glm::vec4 position;
-    glm::vec3 normal;
-    glm::vec2 texture;
+	glm::vec4 position;
+	glm::vec3 normal;
+	glm::vec2 texture;
 };
 
 struct Mesh
@@ -28,9 +28,9 @@ struct Mesh
 
 struct ModelObject
 {
-    char* name;
-    GLuint vao, vbo, ibo, texID;
-    Mesh* submeshes;
+	char* name;
+	GLuint vao, vbo, ibo, texID;
+	Mesh* submeshes;
 };
 
 
@@ -39,9 +39,9 @@ GLchar* readfile(const char* filename);
 Vertex_t* loadobj(const char* filename, Mesh** meshes);
 namespace glf
 {
-    GLuint loadshader(const char* vprog, const char* fprog);
-    bool initmesh(Mesh* mesh);
-    bool loadmodel(ModelObject* object, const char* name, const char* texture, const char* geometry);
+	GLuint loadshader(const char* vprog, const char* fprog);
+	bool initmesh(Mesh* mesh);
+	bool loadmodel(ModelObject* object, const char* name, const char* texture, const char* geometry);
 }
 
 #endif // GLF_H_INCLUDED

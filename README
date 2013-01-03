@@ -1,3 +1,8 @@
 What I have so far
 It compiles if you have all the dependencies
 It doesn't display any type of graphics yet because the framework is still incomplete but its getting there
+
+Dependencies: glfw, freeimage, glm (GLMath), assimp (going to remove it)
+
+When it's time to significantly progress (sound, physics, skeletal animation, etc.) please BRANCH off the base because these changes will require SIGNIFICANT
+addition/modification to the base rendering framework (I know from experience)
