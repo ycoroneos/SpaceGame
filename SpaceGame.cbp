@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SpaceGame" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SpaceGame" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="freeimage" />
+					<Add library="GLEW" />
+					<Add library="GL" />
+					<Add library="glfw" />
+					<Add library="GLU" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SpaceGame" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="src/Engine.cpp" />
+		<Unit filename="src/Engine.h" />
+		<Unit filename="src/defines.h" />
+		<Unit filename="src/glf.cpp" />
+		<Unit filename="src/glf.h" />
+		<Unit filename="src/macros.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/objloader.cpp" />
+		<Unit filename="src/objloader.h" />
+		<Unit filename="src/texture_loader.cpp" />
+		<Unit filename="src/texture_loader.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

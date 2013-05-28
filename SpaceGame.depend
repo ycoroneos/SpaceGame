@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1369453250 source:/home/yanni/SpaceGame/src/Engine.cpp
+	"Engine.h"
+
+1369336093 /home/yanni/SpaceGame/src/Engine.h
+	<stdio.h>
+	"macros.h"
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	"glf.h"
+	"objloader.h"
+
+1369336093 /home/yanni/SpaceGame/src/macros.h
+
+1369455800 /home/yanni/SpaceGame/src/glf.h
+	"macros.h"
+	<GL/glew.h>
+	<GL/glfw.h>
+	<glm/glm.hpp>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"texture_loader.h"
+	<vector>
+
+1369336093 /home/yanni/SpaceGame/src/texture_loader.h
+	<stdio.h>
+	<stdlib.h>
+	<GL/glew.h>
+	<GL/glfw.h>
+	<FreeImage.h>
+	"macros.h"
+
+1369453118 /home/yanni/SpaceGame/src/objloader.h
+
+1369455860 source:/home/yanni/SpaceGame/src/glf.cpp
+	"glf.h"
+
+1369336093 source:/home/yanni/SpaceGame/src/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"macros.h"
+	<GL/glew.h>
+	<GL/glfw.h>
+	"defines.h"
+	"Engine.h"
+	"texture_loader.h"
+
+1369336093 /home/yanni/SpaceGame/src/defines.h
+
+1369336093 source:/home/yanni/SpaceGame/src/objloader.cpp
+
+1369336093 source:/home/yanni/SpaceGame/src/texture_loader.cpp
+	"texture_loader.h"
+
+1369453250 source:/home/yanni/C++/SpaceGame/src/Engine.cpp
+	"Engine.h"
+
+1369455860 source:/home/yanni/C++/SpaceGame/src/glf.cpp
+	"glf.h"
+
+1369336093 source:/home/yanni/C++/SpaceGame/src/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"macros.h"
+	<GL/glew.h>
+	<GL/glfw.h>
+	"defines.h"
+	"Engine.h"
+	"texture_loader.h"
+
+1369336093 source:/home/yanni/C++/SpaceGame/src/objloader.cpp
+
+1369336093 source:/home/yanni/C++/SpaceGame/src/texture_loader.cpp
+	"texture_loader.h"
+
