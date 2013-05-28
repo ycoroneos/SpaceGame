@@ -1,7 +1,0 @@
-#ifndef DEFINES_H_INCLUDED
-#define DEFINES_H_INCLUDED
-
-#define WIDTH 400
-#define HEIGHT 200
-
-#endif // DEFINES_H_INCLUDED
