@@ -5,14 +5,16 @@
 #include <GL/glew.h>
 #include <GL/glfw.h>
 #include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "texture_loader.h"
 #include <vector>
-//#include <assimp/Importer.hpp>
-//#include <assimp/scene.h>
-//#include <assimp/postprocess.h>
+#include <deque>
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 
 struct Vertex_t
 {
@@ -23,7 +25,7 @@ struct Vertex_t
 
 struct Mesh
 {
-	GLuint vao, vbo, ibo, texID;
+	GLuint vao, vbo, ibo, numIndices, texID;
 	glm::mat4x4* pose;               //should theoritically be in relation to parent but physics engine may change that
 	char* name;
 	std::vector<Mesh> children;
@@ -39,13 +41,16 @@ struct ModelObject
 
 void compilestatus(GLuint shader, GLenum type);
 GLchar* readfile(const char* filename);
-Vertex_t* loadobj(const char* filename, std::vector<Mesh>* submeshes);
 namespace glf
 {
 	GLuint loadshader(const char* vprog, const char* fprog);
 	bool initmesh(Mesh* mesh);
-	bool loadmodel(ModelObject* object, const char* name, const char* texture, const char* geometry);
+	bool loadmodel(ModelObject* object, const char* name,const char* filename);
+	void processnodes(aiNode* curNode, ModelObject* object, aiMesh** meshes, aiMaterial** materials);
 	void addsubmesh(ModelObject* object, Mesh* submesh, const char* submesh_parent);
+	Mesh* findmeshbfs(ModelObject* object, const char* name);
+	glm::mat4x4 assimpMatToGlm(aiMatrix4x4 input);
+	bool removemesh(Mesh* mesh);
 }
 
 #endif // GLF_H_INCLUDED

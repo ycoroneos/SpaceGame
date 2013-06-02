@@ -27,6 +27,7 @@ int main()
     glfwSetWindowSizeCallback(windowresize);
     setup();
     renderloop();
+    cleanup();
     glfwCloseWindow();
     glfwTerminate();
     destroyFreeImage();

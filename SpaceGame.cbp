@@ -38,7 +38,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
 		</Compiler>
+		<Linker>
+			<Add library="GLEW" />
+			<Add library="GL" />
+			<Add library="freeimage" />
+			<Add library="GLU" />
+			<Add library="glfw" />
+			<Add library="assimp" />
+		</Linker>
+		<Unit filename="include/Engine.h" />
+		<Unit filename="include/defines.h" />
+		<Unit filename="include/glf.h" />
+		<Unit filename="include/macros.h" />
+		<Unit filename="include/objloader.h" />
+		<Unit filename="include/texture_loader.h" />
 		<Unit filename="src/Engine.cpp" />
 		<Unit filename="src/Engine.h" />
 		<Unit filename="src/defines.h" />
