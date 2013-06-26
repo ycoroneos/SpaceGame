@@ -130,6 +130,9 @@ glm::mat4x4 glf::assimpMatToGlm(aiMatrix4x4 input)
 void glf::processnodes(aiNode* curNode, ModelObject* object, aiMesh** meshes, aiMaterial** materials)
 {
     vector<Mesh>* children;
+    DEBUG_PRINT(("currently on node: "));
+    PUTS((curNode->mName.C_Str()));
+    DEBUG_PRINT(("\n"));
     if (curNode->mParent==NULL)
     {
         DEBUG_PRINT(("on root node\n"));
@@ -139,6 +142,10 @@ void glf::processnodes(aiNode* curNode, ModelObject* object, aiMesh** meshes, ai
     else
     {
         Mesh* target=findmeshbfs(object, curNode->mParent->mName.C_Str());
+        if (target==NULL)
+        {
+            DEBUG_PRINT(("bfs search failed\n"));
+        }
         children=&target->children;
         DEBUG_PRINT(("found child\n"));
     }
